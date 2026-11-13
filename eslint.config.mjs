@@ -66,6 +66,7 @@ export default [
   {
     ignores: [
       ".next/**",
+      ".open-next/**",
       "node_modules/**",
       "*.config.js",
       "*.config.mjs",

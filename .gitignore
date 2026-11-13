@@ -13,8 +13,9 @@
 # testing
 /coverage
 
-# next.js
-/.next/
+# opennextjs-cloudflare build output
+.open-next/
+
 /out/
 
 # production
