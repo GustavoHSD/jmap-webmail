@@ -1,4 +1,4 @@
-import { readFileSync } from "fs";
+import pkg from "./package.json";
 
 const VERSION_CHECK_URL =
   "https://raw.githubusercontent.com/root-fr/jmap-webmail/main/VERSION";
@@ -15,9 +15,6 @@ function compareVersions(current: string, remote: string): number {
   return 0;
 }
 
-const pkg = JSON.parse(
-  readFileSync(`${process.cwd()}/package.json`, "utf-8")
-);
 const current: string = pkg.version ?? "0.0.0";
 console.info(`JMAP Webmail v${current}`);
 

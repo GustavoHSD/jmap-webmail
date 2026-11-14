@@ -16,8 +16,6 @@ import { NextResponse } from 'next/server';
 
 const DOMAIN_RE = /^(?!-)([a-z0-9-]{1,63}\.)+[a-z]{2,63}$/i;
 
-export const runtime = 'edge';
-
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const domain = (searchParams.get('domain') || '').trim().toLowerCase();
